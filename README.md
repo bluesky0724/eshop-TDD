@@ -29,8 +29,8 @@ Ensure all these software requirements are met
 - Git
 - Docker 18 or higher, with docker-compose
 - Node.js 16.x or higher, with npm and npx
-- Port 8080 open
-- Port 9200 internally visible.
+- Port 3000 open
+- Port 5000 open.
 
 ### Cloning from git
 
