@@ -1,6 +1,6 @@
 # EShop project with TDD
 
-![Eshop](https://prnt.sc/nZHiYcu0Fs-D)
+![https://prnt.sc/nZHiYcu0Fs-D](https://img001.prntscr.com/file/img001/KQL5bDXnQFWQuukbh4Y9vg.png)
 
 This is simple EShop implementation following TDD principle 
 
