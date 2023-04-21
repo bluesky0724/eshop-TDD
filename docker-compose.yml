@@ -5,13 +5,13 @@ services:
     build: ./eshop-api
     container_name: server
     environment:
-      - MONGO_URI=mongodb://localhost:27017/nest
-      - MONGO_URI_TEST=mongodb://localhost:27017/test
+      - MONGO_URI=mongodb://mongo:27017/nest
+      - MONGO_URI_TEST=mongodb://mongo:27017/test
     command: npm start
     restart: unless-stopped
     ports:
-      - '5000:5000'
-    depends_on: 
+      - "5000:5000"
+    depends_on:
       - mongo
 
   client:
@@ -20,26 +20,9 @@ services:
     restart: unless-stopped
     command: serve -s build -l 3000
     ports:
-      - '3000:3000'
+      - "3000:3000"
 
   mongo:
     image: mongo
     ports:
-      - '27017:27017'
-    
-  # nginx:
-  #   image: nginx:stable-alpine
-  #   container_name: nginx
-  #   ports:
-  #     - "80:80"
-  #     - "443:443"
-  #   volumes:
-  #     - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
-  #     - /etc/letsencrypt/archive/mymanager.com/fullchain7.pem:/etc/letsencrypt/live/mymanager.com/fullchain.pem
-  #     - /etc/letsencrypt/archive/mymanager.com/privkey7.pem:/etc/letsencrypt/live/mymanager.com/privkey.pem
-  #     - ./ssl-dhparams.pem:/etc/letsencrypt/ssl-dhparams.pem
-  #   restart: unless-stopped
-  #   depends_on:
-  #     - client
-  #     - admin
-  #     - server
+      - "27017:27017"
